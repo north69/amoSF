@@ -34,6 +34,7 @@ GET /ui/api/v1/ajax/mail/settings/{id} (запрос для существующ
 ```
 response: {
   'email'=>'mail@vk.com',
+  'active'=>true,
   'setting'=>{
     'imap'=>{
       'login'=>false,
@@ -87,6 +88,7 @@ POST /ui/api/v1/ajax/mail/settings/{id} (при запросе для сущес
 request:{
   'email'=>'mail@vk.com',
   'password'=>'111111',
+  'active'=>true,
   'setting'=>{
     'imap'=>{
       'server'=>'imap.yandex.ru',
@@ -107,7 +109,7 @@ response:{
 response:{
   'id'=>517,
   'email'=>'mail@vk.com',
-  'action'=>true,
+  'active'=>true,
 }
 
 # возникла ошибка
