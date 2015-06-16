@@ -3,20 +3,20 @@
 
 GET /ui/api/v1/ajax/mail/mailboxes
 
-#### Пример ответа
+#### Пример ответа JSON
 
 ```
-response: {
+{
   items:[
-    {
-      'id'=>26,
-      'email'=>'skoryukin@team.amocrm.ru',
-      'active'=>true,
+    0:{
+      'id':26,
+      'email':'skoryukin@team.amocrm.ru',
+      'active':true,
     },
-    {
-      'id'=>27,
-      'email'=>'mail@mail.ru',
-      'active'=>true,
+    1:{
+      'id':27,
+      'email':'mail@mail.ru',
+      'active':true,
     },
   ]
 }
@@ -29,19 +29,18 @@ response: {
 
 GET /ui/api/v1/ajax/mail/settings/{id} (запрос для существующего ящика)
 
-#### Пример ответа
+#### Пример ответа JSON
 
 ```
-response: {
-  'id'=>26
-  'email'=>'skoryukin@team.amocrm.ru',
-  'active'=>true,
-  'setting'=>{
-    'imap'=>{
-      'login'=>false,
-      'server'=>'imap.yandex.ru',
-      'port'=>993,
-      'ssl'=>true,
+{
+  'id':26
+  'email':'skoryukin@team.amocrm.ru',
+  'active':true,
+  'setting':{
+    'imap':{
+      'server':'imap.yandex.ru',
+      'port':993,
+      'ssl':true,
     },
 }
 ```
@@ -52,21 +51,22 @@ response: {
 #### Resourse URL
 GET /ui/api/v1/ajax/mail/settings
 
-#### Данные на запроса
+#### Данные на запроса JSON
 ```
-request:{
-  'email'=>'mail@vk.com'
+{
+  'email':'mail@vk.com'
 }
 ```
-#### Пример ответа
+#### Пример ответа JSON
 ```
 # если нашли настройки
-response: {
-  'setting'=>{
-    'imap'=>{
-      'server'=>'imap.yandex.ru',
-      'port'=>993,
-      'ssl'=>true,
+{
+  'email':'mail@vk.com'
+  'setting':{
+    'imap':{
+      'server':'imap.yandex.ru',
+      'port':993,
+      'ssl':true,
     },
 }
 
@@ -84,43 +84,43 @@ POST /ui/api/v1/ajax/mail/mailboxes(при сохранении нового я�
 
 POST /ui/api/v1/ajax/mail/settings/{id} (при запросе для существующего ящика)
 
-#### Данные для запроса
+#### Данные для запроса JSON
 ```
-request:{
-  'email'=>'mail@vk.com',
-  'password'=>'111111',
-  'active'=>true,
-  'setting'=>{
-    'imap'=>{
-      'server'=>'imap.yandex.ru',
-      'port'=>993,
-      'ssl'=>true,
+{
+  'email':'mail@vk.com',
+  'password':'111111',
+  'active':true,
+  'setting':{
+    'imap':{
+      'server':'imap.yandex.ru',
+      'port':993,
+      'ssl':true,
     },
 }
 
 ```
-#### Пример ответа
+#### Пример ответа JSON
 ```
 # если отредактировали данные для ящика
-response:{
-  'response'=>'success'
+{
+  'response':'success'
 }
 
 # если создали новый ящик
-response:{
-  'id'=>517,
-  'email'=>'mail@vk.com',
-  'active'=>true,
+{
+  'id':517,
+  'email':'mail@vk.com',
+  'active':true,
 }
 
 # возникла ошибка
 {
-  'error'=>{
-    'email'=>'invalid',
-    'password'=>'invalid',
-    'imap'=>{
-      'server'=>'invalid',
-      'port'=>'invalid',
+  'error':{
+    'email':'invalid',
+    'password':'invalid',
+    'imap':{
+      'server':'invalid',
+      'port':'invalid',
     }
   }
 }
