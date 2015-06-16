@@ -33,7 +33,8 @@ GET /ui/api/v1/ajax/mail/settings/{id} (запрос для существующ
 
 ```
 response: {
-  'email'=>'mail@vk.com',
+  'id'=>26
+  'email'=>'skoryukin@team.amocrm.ru',
   'active'=>true,
   'setting'=>{
     'imap'=>{
@@ -49,7 +50,7 @@ response: {
 После того как будет отредактирован адрес почтового ящика и поле ввода адреса потеряет фокус, будет сгенерировано событие потери фокуса. Следом отправится запрос на настройки для сервера, которому принадлежит этот адрес.
 
 #### Resourse URL
-GET /ui/api/v1/ajax/mail/settings/find
+GET /ui/api/v1/ajax/mail/settings
 
 #### Данные на запроса
 ```
@@ -79,7 +80,7 @@ response: {}
 Необходимо продумать коды ошибок.
 
 #### Resourse URL
-POST /ui/api/v1/ajax/mail/settings (при запросе для нового ящика)
+POST /ui/api/v1/ajax/mail/mailboxes(при сохранении нового ящика)
 
 POST /ui/api/v1/ajax/mail/settings/{id} (при запросе для существующего ящика)
 
