@@ -117,7 +117,7 @@ POST /ui/api/v1/ajax/mail/settings/{id} (при запросе для сущес
 {
   'errors':{
     'email':'invalid',
-    'password':'not exist',
+    'password':'not_exist',
     'setting':{
       'imap':{
         'server':'empty',
@@ -133,25 +133,25 @@ $errors = [];
 
 $errors['email'] = 'invalid';// не корректно введен адрес почтового ящика
 $errors['email'] = 'empty';// не заполнено поле email
-$errors['email'] = 'not exist';// отсутствует поле email
+$errors['email'] = 'not_exist';// отсутствует поле email
 
 $errors['password'] = 'empty';// не заполнено поле password
-$errors['password'] = 'not exist';// отсутствует поле password
+$errors['password'] = 'not_exist';// отсутствует поле password
 
 $errors['active'] = 'empty';// не заполнено поле active
 $errors['active'] = 'invalid';// значение поля active должно быть булевым
-$errors['active'] = 'not exist';// отсутствует поле active
+$errors['active'] = 'not_exist';// отсутствует поле active
 
 $errors['setting']['imap']['server'] = 'invalid';// не корректно введен адрес imap-сервера
 $errors['setting']['imap']['server'] = 'empty';// не заполнено поле server
-$errors['setting']['imap']['server'] = 'not exist';// отсутствует поле server
+$errors['setting']['imap']['server'] = 'not_exist';// отсутствует поле server
 
 $errors['setting']['imap']['port'] = 'empty';// не заполнено поле port
 $errors['setting']['imap']['port'] = 'invalid';// не корректно введен порт imap-сервера
-$errors['setting']['imap']['port'] = 'not exist';// отсутствует поле port
+$errors['setting']['imap']['port'] = 'not_exist';// отсутствует поле port
 
 $errors['setting']['imap']['ssl'] = 'empty';// не заполнено поле ssl
 $errors['setting']['imap']['ssl'] = 'invalid';// значение порта imap-сервера должно быть булевым
-$errors['setting']['imap']['ssl'] = 'not exist';// отсутствует поле ssl
+$errors['setting']['imap']['ssl'] = 'not_exist';// отсутствует поле ssl
 
 ```
