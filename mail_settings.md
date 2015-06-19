@@ -27,7 +27,7 @@ GET /ui/api/v1/ajax/mail/mailboxes
 
 #### Resourse URL
 
-GET /ui/api/v1/ajax/mail/settings/{id} (запрос для существующего ящика)
+GET /ui/api/v1/ajax/mail/mailboxes/{id} (запрос для существующего ящика)
 
 #### Пример ответа JSON
 
@@ -82,7 +82,7 @@ response: {}
 #### Resourse URL
 POST /ui/api/v1/ajax/mail/mailboxes(при сохранении нового ящика)
 
-POST /ui/api/v1/ajax/mail/settings/{id} (при запросе для существующего ящика)
+POST /ui/api/v1/ajax/mail/mailboxes/{id} (при запросе для существующего ящика)
 
 #### Данные для запроса JSON
 ```
